@@ -20,10 +20,14 @@ function clearGrid(gridSize){
         gridItem.addEventListener("mouseover", () =>{
             gridItem.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
         });
+        
+        gridItem.addEventListener("click", () =>{
+            gridItem.style.backgroundColor = `rgb(${255}, ${255}, ${255})`;
+        });
 
         grid.appendChild(gridItem);
     }
-    grid.style.width = 100/gridSize;
+    grid.style.width = .95/gridSize;
     return;
 };
 
@@ -39,6 +43,9 @@ function gridMaker(gridSize) {
         gridItem.style.setProperty('--grid-size',gridSize);
         gridItem.addEventListener("mouseover", () =>{
             gridItem.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        });
+        gridItem.addEventListener("click", () =>{
+            gridItem.style.backgroundColor = `rgb(${255}, ${255}, ${255})`;
         });
 
         grid.appendChild(gridItem);
@@ -60,6 +67,11 @@ function defaultSize(defaultGrid){
             gridItem.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
         })
 
+        gridItem.addEventListener("click", () =>{
+            gridItem.style.backgroundColor = `rgb(${255}, ${255}, ${255})`;
+        })
+
+
         grid.appendChild(gridItem);
     }
     grid.style.width = 100/defaultGrid;
@@ -77,7 +89,7 @@ btn.addEventListener("click",(event) => {
     const gridSize = parseInt(input.value);
     // console.log(typeof(gridSize));
 
-    if(!Number.isInteger(gridSize) || gridSize > 100) {
+    if(!Number.isInteger(gridSize) || gridSize > 100 || gridSize <= 0) {
         input.value = "";
         input.focus();
         alert("Please enter a valid number under 100 to create your grid.");
