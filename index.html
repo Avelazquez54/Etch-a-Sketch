@@ -7,8 +7,21 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Etch-A-Sketch</h1>
+        <p>Hello, Hope you are have a good day so far. This is my Etch-A-Sketch Project, where you can drag your mouse cursor 
+            into the blank space below to make pretty colors come together.</p>
+        <p>Please enter below the grid size you would like to see. The upper max limit is 100, so do not try to go beyond that :).</p>
+        <input type="text" id ="grid" name="num_grid"><br>
+        <button id="commit">Submit</button>
+        <button id ="reset">Reset</button><br>
+        <button id ="clear">Clear</button>
+    </div>
 
-
+    <div class ="container">
+        <div id = "sketch">
+        </div>
+    </div>
     <script src="home.js"></script>
 </body>
 </html>
