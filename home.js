@@ -80,10 +80,11 @@ btn.addEventListener("click",(event) => {
     if(!Number.isInteger(gridSize) || gridSize > 100) {
         input.value = "";
         input.focus();
-        alert("Please Enter a valid number under 100 to create your grid.");
+        alert("Please enter a valid number under 100 to create your grid.");
         return;
     }
     gridMaker(gridSize);
+    currentSize = gridSize;
     input.value = "";
     input.focus();
 
@@ -92,6 +93,7 @@ btn.addEventListener("click",(event) => {
 
 
 reset.addEventListener("click",() => {
+    currentSize = 16;
     resetGrid();
     defaultSize(defaultGrid);
     input.value = "";
