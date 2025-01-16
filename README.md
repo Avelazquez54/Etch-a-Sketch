@@ -8,7 +8,7 @@ Mouse over the default grid size to create a sketch in many different colors or 
 
 NOTE: Not optimized for smaller screens when doing large scale grid sizes. 
 
-Any advice or constructive Criticism is really helpful as I always appreciate any feedback to improve my skills.
+Any advice or constructive criticism is really helpful as I always appreciate any feedback to improve my skills.
 
 Huge Thanks to The Odin Project for giving us the lessons and projects they come up with to test and perfect Front-End Web Development skills.
 
